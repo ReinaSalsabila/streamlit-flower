@@ -64,7 +64,7 @@ def main():
 
     def import_and_predict(image_data, model):
         size = (180, 180)
-        image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+        image = ImageOps.fit(image_data, size, Image.LANCZOS)
         image = np.asarray(image)
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         img_reshape = img[np.newaxis, ...]
