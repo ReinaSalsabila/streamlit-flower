@@ -52,6 +52,8 @@ def hitung_total_harga(bunga, jumlah):
 def main():
     st.title("Flower Classification")
 
+    model = load_model()
+
     file = st.file_uploader("Please upload an image file", type=["jpg", "png"])
 
     import cv2
